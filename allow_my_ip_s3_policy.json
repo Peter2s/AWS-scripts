@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Id": "allow_my_ip_s3_policy",
+  "Statement": [
+    {
+      "Sid": "IpAllow",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "*",
+      "Resource": "arn:aws:s3:::p2s-py/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "197.55.129.198"
+        }
+      }
+    }
+  ]
+}
